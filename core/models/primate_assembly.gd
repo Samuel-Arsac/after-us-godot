@@ -75,7 +75,6 @@ func resolve_row(row: GameEnums.RowType) -> Array[Frame]:
 
 	return result
 
-
 ## Détermine si une cellule est fermée.
 ## - "NONE"  -> toujours fermée (frame intérieure, par design).
 ## - "LEFT"  -> fermée seulement si la carte de gauche existe ET que SA
