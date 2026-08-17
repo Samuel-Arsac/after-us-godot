@@ -23,7 +23,7 @@ var condition: Callable
 
 ## Effet produit à l'activation : gain de ressources, VP, ou capacité spéciale
 ## TODO: remplacer par une classe FrameEffect dédiée (cf. frame_effect_executor.gd)
-var effect: Callable
+var effect: Dictionary= {}
 
 ## Symbole Chimpanzé (Ω) : permet de réactiver une autre frame fermée
 var grants_reactivation: bool = false
