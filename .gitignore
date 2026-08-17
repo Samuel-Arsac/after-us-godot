@@ -1,0 +1,28 @@
+# Godot 4+ specific ignores
+.godot/
+.import/
+export.cfg
+export_presets.cfg
+
+# Fichiers de build / export
+*.pck
+*.exe
+*.apk
+*.aab
+*.ipa
+export/
+build/
+
+# Fichiers macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Éditeurs de code
+.vscode/
+.idea/
+*.swp
+
+# Mono / C# (au cas où)
+.mono/
+data_*/
+mono_crash.*.json
