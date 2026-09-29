@@ -16,8 +16,19 @@ extends Resource
 ## Chaque cellule est un Dictionary avec ce format :
 ## {
 ##   "open_side": "NONE" | "LEFT" | "RIGHT",   -> NONE = toujours fermée (frame intérieure)
-##   "cost": {ResourceKind: montant, ...},      -> vide si gratuit
-##   "effect": {...},                           -> décrit plus tard (frame_effect_executor.gd)
+##
+##   "cost": {GameEnums.ResourceKind: montant, ...}
+##           -> ce qu'il faut DÉPENSER pour activer l'effet (jamais de VP en coût).
+##           -> vide {} si gratuit.
+##
+##   "effect": {GameEnums.RemovalRewardKind: montant, ...}
+##           -> ce qu'on GAGNE en activant la frame : une ressource classique
+##              (FLOWER/FRUIT/GRAIN/ENERGY) ou des points de victoire (VICTORY_POINTS).
+##           -> réutilise volontairement le même enum que removal_reward_kind :
+##              c'est exactement le même ensemble de possibilités (livret p.6 et p.9).
+##           -> vide {} si rien n'est imprimé sur CETTE carte (cas d'une frame
+##              ouverte dont l'effet est imprimé sur la carte voisine qui la ferme).
+##
 ##   "grants_reactivation": bool,               -> symbole Ω (Chimpanzé)
 ## }
 ## Une ligne peut contenir 1, 2 ou 3 cellules selon la carte (voir livret p.5-9).
