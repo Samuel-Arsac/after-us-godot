@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="ApeCard" format=3 uid="uid://d3wdpfrvj5n7b"]
+
+[ext_resource type="Script" uid="uid://c1emxgat3ihsy" path="res://core/models/ape_card.gd" id="1_srxsf"]
+
+[resource]
+script = ExtResource("1_srxsf")
+identifier = "018"
+top_row_frames = Array[Dictionary]([{
+"cost": {},
+"effect": {
+0: 1
+},
+"open_side": "LEFT"
+}, {
+"cost": {},
+"effect": {
+3: 1
+},
+"open_side": "RIGHT"
+}])
+center_row_frames = Array[Dictionary]([{
+"cost": {
+4: 1
+},
+"effect": {
+4: 1
+},
+"open_side": "NONE"
+}])
+bottom_row_frames = Array[Dictionary]([{
+"cost": {
+0: 1
+},
+"effect": {},
+"open_side": "RIGHT"
+}])
+metadata/_custom_type_script = "uid://c1emxgat3ihsy"
